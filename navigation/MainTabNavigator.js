@@ -9,7 +9,8 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-import ProgressScreen from '../screens/ProgressScreen'
+import ProgressScreen from '../screens/ProgressScreen';
+import ListScreen from '../screens/ListScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -71,9 +72,28 @@ ProgressStack.navigationOptions = {
   ),
 };
 
+const ListStack = createStackNavigator({
+  List: ListScreen
+});
+
+ListStack.navigationOptions = {
+  tabBarLabel: 'List',
+  tabBarIcon: ({ focused }) => (
+      <TabBarIcon
+          focused={focused}
+          name={
+            Platform.OS === 'ios'
+                ? `ios-information-circle${focused ? '' : '-outline'}`
+                : 'md-information-circle'
+          }
+      />
+  ),
+};
+
 export default createBottomTabNavigator({
   HomeStack,
   LinksStack,
   SettingsStack,
   ProgressStack,
+  ListStack,
 });

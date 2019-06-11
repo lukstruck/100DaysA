@@ -1,102 +1,111 @@
-import React, { Component } from 'react';
-import { Alert, AppRegistry, Button, StyleSheet, View, Text, TouchableOpacity, AsyncStorage } from 'react-native';
+import React, {Component} from 'react';
+import {Alert, AppRegistry, Button, StyleSheet, View, Text, TouchableOpacity, AsyncStorage} from 'react-native';
+import Storage from '../components/Storage';
 
 class Table extends Component {
 
-    renderCol(val){
-        let col = val == 0? 'red' : 'green';
-        let text = val == 0? '': 'x';
+    renderCol(val) {
+        let col = val == 0 ? 'red' : 'green';
+        let text = val == 0 ? '' : 'x';
         return (
-            <View style={{ flex: 1, alignSelf: 'stretch', backgroundColor: col, justifyContent: 'center', borderWidth: 0.5 }}>
-    <Text style={{alignSelf: 'center', fontSize: 30 }}>
-        {text}
-    </Text>
-        </View>
-    );
+            <View style={{
+                flex: 1,
+                alignSelf: 'stretch',
+                backgroundColor: col,
+                justifyContent: 'center',
+                borderWidth: 0.5
+            }}>
+                <Text style={{alignSelf: 'center', fontSize: 30}}>
+                    {text}
+                </Text>
+            </View>
+        );
     }
 
     renderRow(vals) {
         return (
-            <View style={{ flex: 1, alignSelf: 'stretch', flexDirection: 'row' }}>
-        {
-            vals.map((val) => { // This will render a row for each data element.
-                return this.renderCol(val);
-            })
-        }
-    </View>
-    );
+            <View style={{flex: 1, alignSelf: 'stretch', flexDirection: 'row'}}>
+                {
+                    vals.map((val) => { // This will render a row for each data element.
+                        return this.renderCol(val);
+                    })
+                }
+            </View>
+        );
     }
 
     render() {
 
-        let data = [[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0]];
+        let data = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
 
-        for (let i = 0; i < this.props.finishedDays; i++){
+        for (let i = 0; i < this.props.finishedDays; i++) {
             data[Math.floor(i / 10)][i % 10] = 1;
         }
         return (
-            <View style={{ flex: 1, alignItems: 'center' }}>
-        {
-            data.map((vals) => { // This will render a row for each data element.
-                return this.renderRow(vals);
-            })
-        }
-    </View>
-    );
+            <View style={{flex: 1, alignItems: 'center'}}>
+                {
+                    data.map((vals) => { // This will render a row for each data element.
+                        return this.renderRow(vals);
+                    })
+                }
+            </View>
+        );
     }
 }
 
 export default class ProgressScreen extends Component {
-    state = {finishedDays: 0}
 
     constructor(props) {
         super(props);
 
         this.state = {
-            isLoading: true
+            isLoading: true, finishedDays: 0, list: "default",
         }
     }
 
     async componentDidMount() {
-        await this.init()
+        await this.init();
 
+        console.log("didMount");
         // you might want to do the I18N setup here
     }
 
     async init() {
-        const value = await this._retrieveData();
+        await this._retrieveData();
         this.setState({
             isLoading: false
-        })
+        });
     }
 
     _storeData = async () => {
         try {
-            await AsyncStorage.setItem('finishedDays', JSON.stringify(this.state.finishedDays));
+            await Storage.setProgress(this.state.list, this.state.finishedDays);
         } catch (error) {
             // Error saving data
         }
     };
 
     _retrieveData = async () => {
-        try {
-            const value = await AsyncStorage.getItem('finishedDays');
+        Storage.getProgress(this.state.list).then((value) => {
             if (value !== null) {
                 // We have data!!
-                this.setState({finishedDays: JSON.parse(value)})
+                console.log("got " + value + " for " + this.state.list);
+                this.setState({finishedDays: value});
+            } else {
+                console.log("setting up data for " + this.state.list);
+                this._pressReset();
             }
-        } catch (error) {
-            // Error retrieving data
-        }
+        });
     };
 
     async _pressAddDay() {
-        if(this.state == undefined)
+        if (this.state == undefined)
             alert("Dafuq");
-        if(this.state.finishedDays == 100)
-            this.setState({finishedDays: 0});
-        if(typeof(this.state.finishedDays) != "number")
+        if (typeof (this.state.finishedDays) != "number") {
             this.setState({finishedDays: parseInt(this.state.finishedDays)});
+        }
+        if (this.state.finishedDays === 100)
+            this.setState({finishedDays: 0});
         await this.setState(previousState => ({finishedDays: previousState.finishedDays + 1}));
         this._storeData();
     }
@@ -107,27 +116,38 @@ export default class ProgressScreen extends Component {
     }
 
     render() {
+        const { navigation } = this.props;
+        const list = navigation.getParam('list', 'default');
+        let set = async () => {
+            await this.setState({list: list});
+            await this._retrieveData();
+        };
+        if(list !== this.state.list && list !== undefined)
+            set();
 
         return (
             <View style={styles.main}>
-            <View style={styles.checkBoxes}>
-            <Table finishedDays={this.state.finishedDays} >
-            </Table>
+                <View style={{flex: 0, justifyContent: 'center', alignItems: 'center', paddingBottom: 10}}>
+                    <Text style={{fontSize: 30}}>List {this.state.list}</Text>
+                </View>
+                <View style={styles.checkBoxes}>
+                    <Table finishedDays={this.state.finishedDays}>
+                    </Table>
+                </View>
+                <View style={styles.container}>
+                    <TouchableOpacity onPress={this._pressAddDay.bind(this)}>
+                        <View style={styles.button}>
+                            <Text style={styles.buttonText}>Check another day!</Text>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={this._pressReset.bind(this)}>
+                        <View style={styles.button}>
+                            <Text style={styles.buttonText}>Reset</Text>
+                        </View>
+                    </TouchableOpacity>
+                </View>
             </View>
-            <View style={styles.container}>
-            <TouchableOpacity onPress={this._pressAddDay.bind(this)}>
-            <View style={styles.button}>
-            <Text style={styles.buttonText}>Check another day!</Text>
-        </View>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={this._pressReset.bind(this)}>
-            <View style={styles.button}>
-            <Text style={styles.buttonText}>Reset</Text>
-            </View>
-            </TouchableOpacity>
-            </View>
-            </View>
-    );
+        );
     }
 }
 
@@ -135,18 +155,19 @@ const styles = StyleSheet.create({
     main: {
         flex: 1,
         padding: 20,
-        justifyContent: 'stretch'
+        paddingBottom: 40,
+        justifyContent: 'space-evenly'
     },
     checkBoxes: {
         flex: 1,
     },
     container: {
-        paddingTop: 20,
         justifyContent: 'flex-end',
     },
     button: {
-        marginBottom: 30,
+        paddingTop: 20,
         width: 260,
+        margin: 0,
         marginRight: 'auto',
         marginLeft: 'auto',
         alignItems: 'center',
