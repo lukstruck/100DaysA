@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="975489da-632f-48a4-9dde-1eb2e0d65958" name="Default Changelist" comment="init">
-      <change afterPath="$PROJECT_DIR$/components/Storage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/ListScreen.js" afterDir="false" />
+    <list default="true" id="975489da-632f-48a4-9dde-1eb2e0d65958" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/MainTabNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/MainTabNavigator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/ProgressScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/ProgressScreen.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -52,22 +49,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/ProgressScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="125" column="12" selection-start-line="125" selection-start-column="12" selection-end-line="125" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" column="76" selection-start-line="1" selection-start-column="76" selection-end-line="1" selection-end-column="76" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/screens/ListScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
+            <state relative-caret-position="855">
               <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -190,7 +184,7 @@
       <option name="presentableId" value="Default" />
       <updated>1560267302867</updated>
       <workItem from="1560267306214" duration="844000" />
-      <workItem from="1560269306843" duration="11685000" />
+      <workItem from="1560269306843" duration="11892000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1560267943754</created>
@@ -199,11 +193,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560267943754</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="working progess and list screens.&#10;Next step: make it beautiful.">
+      <created>1560286011628</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560286011628</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12529000" />
+    <option name="totallyTimeSpent" value="12736000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="755" extended-state="0" />
@@ -235,7 +236,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="working progess and list screens.&#10;Next step: make it beautiful." />
+    <option name="LAST_COMMIT_MESSAGE" value="working progess and list screens.&#10;Next step: make it beautiful." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/images/splash.png">
@@ -305,20 +307,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/ListScreen.js">
+    <entry file="file://$PROJECT_DIR$/screens/ProgressScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" column="76" selection-start-line="1" selection-start-column="76" selection-end-line="1" selection-end-column="76" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/ProgressScreen.js">
+    <entry file="file://$PROJECT_DIR$/screens/ListScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="125" column="12" selection-start-line="125" selection-start-column="12" selection-end-line="125" selection-end-column="12" />
+        <state relative-caret-position="855">
+          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

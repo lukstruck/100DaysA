@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Alert, AppRegistry, Button, StyleSheet, View, Text, TouchableOpacity, AsyncStorage} from 'react-native';
+import {Alert, AppRegistry, Button, StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import Storage from '../components/Storage';
 
 class Table extends Component {
