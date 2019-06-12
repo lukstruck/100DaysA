@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="975489da-632f-48a4-9dde-1eb2e0d65958" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/v2/components/HomeScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/v2/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/v2/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/assets/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/v2/assets/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/assets/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/v2/assets/splash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/components/ListScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/v2/components/ListScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/v2/components/ProgressScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/v2/components/ProgressScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v2/components/Storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/v2/components/Storage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v2/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/v2/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/v2/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,30 +23,40 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/v2/babel.config.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/v2/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/v2/components/HomeScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/v2/components/ProgressScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="181" column="101" selection-start-line="181" selection-start-column="101" selection-end-line="181" selection-end-column="101" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" column="33" selection-start-line="1" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v2/app.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -62,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/v2/components/ListScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2175">
-              <caret line="145" column="17" selection-start-line="145" selection-start-column="17" selection-end-line="145" selection-end-column="17" />
+            <state relative-caret-position="496">
+              <caret line="151" column="5" lean-forward="true" selection-start-line="143" selection-start-column="6" selection-end-line="151" selection-end-column="5" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -80,14 +91,9 @@
         <entry file="file://$PROJECT_DIR$/v2/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/v1/app.json">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -124,7 +130,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>default</find>
+      <find>[styles.text, styles.p]</find>
     </findStrings>
+    <replaceStrings>
+      <replace>styles.text</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -142,11 +152,13 @@
         <option value="$PROJECT_DIR$/v2/ListScreen.tsx" />
         <option value="$PROJECT_DIR$/v2/tsconfig.json" />
         <option value="$PROJECT_DIR$/v2/components/ListScreen.tsx" />
-        <option value="$PROJECT_DIR$/v2/App.js" />
-        <option value="$PROJECT_DIR$/v2/components/ListScreen.js" />
         <option value="$PROJECT_DIR$/v2/package.json" />
         <option value="$PROJECT_DIR$/v2/components/Storage.js" />
+        <option value="$PROJECT_DIR$/v2/app.json" />
+        <option value="$PROJECT_DIR$/v2/App.js" />
         <option value="$PROJECT_DIR$/v2/components/ProgressScreen.js" />
+        <option value="$PROJECT_DIR$/v2/components/ListScreen.js" />
+        <option value="$PROJECT_DIR$/v2/components/HomeScreen.js" />
       </list>
     </option>
   </component>
@@ -174,6 +186,12 @@
               <item name="100DaysA" type="b2602c69:ProjectViewProjectNode" />
               <item name="100DaysA" type="462c0819:PsiDirectoryNode" />
               <item name="v2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="100DaysA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="100DaysA" type="462c0819:PsiDirectoryNode" />
+              <item name="v2" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -222,7 +240,7 @@
       <option name="presentableId" value="Default" />
       <updated>1560267302867</updated>
       <workItem from="1560267306214" duration="844000" />
-      <workItem from="1560269306843" duration="21938000" />
+      <workItem from="1560269306843" duration="25422000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1560267943754</created>
@@ -259,17 +277,24 @@
       <option name="project" value="LOCAL" />
       <updated>1560324112654</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added one click per day">
+      <created>1560326427939</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1560326427939</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22782000" />
+    <option name="totallyTimeSpent" value="26266000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="755" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24945612" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24945612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -309,7 +334,8 @@
     <MESSAGE value="working progess and list screens.&#10;Next step: make it beautiful." />
     <MESSAGE value="adding version" />
     <MESSAGE value="v2 ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2 ready" />
+    <MESSAGE value="added one click per day" />
+    <option name="LAST_COMMIT_MESSAGE" value="added one click per day" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/images/splash.png">
@@ -478,33 +504,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/v2/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/v2/components/ListScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2175">
-          <caret line="145" column="17" selection-start-line="145" selection-start-column="17" selection-end-line="145" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/v1/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/v2/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -515,12 +521,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/v2/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/v2/components/ProgressScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="181" column="101" selection-start-line="181" selection-start-column="101" selection-end-line="181" selection-end-column="101" />
+        <state relative-caret-position="15">
+          <caret line="1" column="33" selection-start-line="1" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/components/ListScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="151" column="5" lean-forward="true" selection-start-line="143" selection-start-column="6" selection-end-line="151" selection-end-column="5" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/components/HomeScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>

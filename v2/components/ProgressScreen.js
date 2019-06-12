@@ -5,6 +5,10 @@ import * as Progress from 'react-native-progress';
 
 class TableProgress extends Component {
 
+    static navigationOptions = {
+        title: 'Progress',
+    };
+
     renderCol(val) {
         let col = val == 0 ? '#FA023C' : '#C8FF00';
         let text = val == 0 ? '' : 'X';

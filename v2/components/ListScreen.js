@@ -12,7 +12,11 @@ import {
 } from 'react-native';
 import Storage from './Storage';
 
-export default class FlatListBasics extends Component {
+export default class ListScreen extends Component {
+
+    static navigationOptions = {
+        title: 'Overview',
+    };
 
     constructor(props) {
         super(props);
