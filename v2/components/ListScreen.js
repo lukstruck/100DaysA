@@ -10,7 +10,7 @@ import {
     ActivityIndicator,
     ScrollView
 } from 'react-native';
-import Storage from '../components/Storage';
+import Storage from './Storage';
 
 export default class FlatListBasics extends Component {
 
@@ -24,9 +24,6 @@ export default class FlatListBasics extends Component {
         this.deleteList = this.deleteList.bind(this);
         this._onPressButton = this._onPressButton.bind(this);
         this.switchTo = this.switchTo.bind(this);
-
-        const {navigate} = this.props.navigation;
-        this.navigate = navigate;
     }
 
     async componentDidMount() {
@@ -76,6 +73,9 @@ export default class FlatListBasics extends Component {
         }
         return (
             <View style={styles.container}>
+                <Text style={{alignSelf: 'center', fontSize: 35, fontWeight: 'bold', paddingBottom: 20}}>
+                    100 Days A ...
+                </Text>
                 <View style={{flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 5}}>
                     <TextInput
                         value={this.state.text}
@@ -102,7 +102,7 @@ export default class FlatListBasics extends Component {
                             <View style={{flex: 1, flexDirection: "row", justifyContent: "space-between"}}>
                                 <TouchableOpacity onPress={() => this.switchTo(item.key)}>
                                     <View style={styles.button}>
-                                        <Text style={styles.buttonText}>{item.key}</Text>
+                                        <Text style={styles.buttonText}>... {item.key}</Text>
                                     </View>
                                 </TouchableOpacity>
                                 <TouchableOpacity style={{justifyContent: 'center', flexDirection: 'column',}}
@@ -123,7 +123,8 @@ export default class FlatListBasics extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 10,
+        paddingTop: 30,
+        padding: 20,
         flexDirection: "column",
     },
     item: {
@@ -142,7 +143,7 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         padding: 5,
-        color: 'black',
+        color: '#007aff',
         fontSize: 30,
     }
 });

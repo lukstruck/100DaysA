@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import {Alert, AppRegistry, Button, StyleSheet, View, Text, TouchableOpacity, ActivityIndicator} from 'react-native';
-import Storage from '../components/Storage';
+import {StyleSheet, View, Text, TouchableOpacity, ActivityIndicator} from 'react-native';
+import Storage from './Storage';
+import * as Progress from 'react-native-progress';
 
-class Table extends Component {
+class TableProgress extends Component {
 
     renderCol(val) {
-        let col = val == 0 ? 'red' : 'green';
+        let col = val == 0 ? '#FA023C' : '#C8FF00';
         let text = val == 0 ? '' : 'X';
         return (
             <View style={{
@@ -13,7 +14,9 @@ class Table extends Component {
                 alignSelf: 'stretch',
                 backgroundColor: col,
                 justifyContent: 'center',
-                borderWidth: 0.5
+                borderWidth: 0.5,
+                borderColor: '#4B000F',
+                borderRadius: 5,
             }}>
                 <Text style={{alignSelf: 'center', fontSize: 25, padding: 0}}>
                     {text}
@@ -36,7 +39,16 @@ class Table extends Component {
 
     render() {
 
-        let data = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
+        let data = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
 
         for (let i = 0; i < this.props.finishedDays; i++) {
             data[Math.floor(i / 10)][i % 10] = 1;
@@ -53,13 +65,32 @@ class Table extends Component {
     }
 }
 
+class BarProgress extends Component {
+
+    state = {progress: 0};
+    setProgress() {
+        if (this.state.progress !== this.props.finishedDays)
+            this.setState({progress: this.props.finishedDays});
+    }
+
+    render() {
+        this.setProgress();
+        return (
+            <View>
+                <Progress.Circle style={{alignSelf: 'center'}} progress={this.state.progress / 100} size={200}
+                                 showsText={true} thickness={5} borderWidth={2}/>
+            </View>
+        );
+    }
+}
+
 export default class ProgressScreen extends Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
-            isLoading: true, finishedDays: 0,
+            isLoading: true,
         }
     }
 
@@ -92,8 +123,8 @@ export default class ProgressScreen extends Component {
                 console.log("got " + value + " for " + this.state.list);
                 this.setState({finishedDays: value});
             } else {
-                console.log("setting up data for " + this.state.list);
-                this._pressReset();
+                /*console.log("setting up data for " + this.state.list);
+                this._pressReset();*/
             }
         });
     };
@@ -125,7 +156,7 @@ export default class ProgressScreen extends Component {
             }
         });
 
-        if (this.state.list === undefined) {
+        if (this.state.list === undefined || this.state.finishedDays === undefined) {
             return (<View style={{justifyContent: 'center'}}>
                 <ActivityIndicator size="large" color="#0000ff"/>
             </View>);
@@ -134,21 +165,15 @@ export default class ProgressScreen extends Component {
         return (
             <View style={styles.main}>
                 <View style={{flex: 0, justifyContent: 'center', alignItems: 'center', paddingBottom: 10}}>
-                    <Text style={{fontSize: 30}}>100 Days A {this.state.list}</Text>
+                    <Text style={{fontSize: 30, fontWeight: 'bold'}}>100 Days A {this.state.list}</Text>
                 </View>
                 <View style={styles.checkBoxes}>
-                    <Table finishedDays={this.state.finishedDays}>
-                    </Table>
+                    <BarProgress finishedDays={this.state.finishedDays}/>
                 </View>
                 <View style={styles.container}>
                     <TouchableOpacity onPress={this._pressAddDay.bind(this)}>
                         <View style={styles.button}>
                             <Text style={styles.buttonText}>I had a {this.state.list} today!</Text>
-                        </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={this._pressReset.bind(this)}>
-                        <View style={styles.button}>
-                            <Text style={styles.buttonText}>Reset</Text>
                         </View>
                     </TouchableOpacity>
                 </View>
@@ -162,10 +187,10 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 20,
         paddingBottom: 40,
-        justifyContent: 'space-evenly'
+        justifyContent: 'space-between'
     },
     checkBoxes: {
-        flex: 1,
+        height: 320,
     },
     container: {
         justifyContent: 'flex-end',
@@ -177,9 +202,9 @@ const styles = StyleSheet.create({
         marginRight: 'auto',
         marginLeft: 'auto',
         alignItems: 'center',
-        justifyContent: 'center'
     },
     buttonText: {
         fontSize: 25,
+        color: '#007aff',
     }
 });

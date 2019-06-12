@@ -14,7 +14,7 @@ export default class Storage {
     static async getLists() {
         let ret = await Storage.load("@100DaysA:lists");
         if (!Array.isArray(ret) || ret.length === 0) {
-            ret = ["Sweat"];
+            ret = [];
         }
         console.log("got all lists: " + ret);
         return ret;
@@ -24,6 +24,7 @@ export default class Storage {
         console.log("adding list " + name);
         let lists = await Storage.getLists();
         lists.push(name);
+        await Storage.setProgress(name, 0);
         return await Storage.store("@100DaysA:lists", lists);
     }
 
