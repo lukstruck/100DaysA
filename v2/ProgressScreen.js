@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {Alert, AppRegistry, Button, StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import {Alert, AppRegistry, Button, StyleSheet, View, Text, TouchableOpacity, ActivityIndicator} from 'react-native';
 import Storage from '../components/Storage';
 
 class Table extends Component {
 
     renderCol(val) {
         let col = val == 0 ? 'red' : 'green';
-        let text = val == 0 ? '' : 'x';
+        let text = val == 0 ? '' : 'X';
         return (
             <View style={{
                 flex: 1,
@@ -15,7 +15,7 @@ class Table extends Component {
                 justifyContent: 'center',
                 borderWidth: 0.5
             }}>
-                <Text style={{alignSelf: 'center', fontSize: 30}}>
+                <Text style={{alignSelf: 'center', fontSize: 25, padding: 0}}>
                     {text}
                 </Text>
             </View>
@@ -59,7 +59,7 @@ export default class ProgressScreen extends Component {
         super(props);
 
         this.state = {
-            isLoading: true, finishedDays: 0, list: "default",
+            isLoading: true, finishedDays: 0,
         }
     }
 
@@ -116,19 +116,25 @@ export default class ProgressScreen extends Component {
     }
 
     render() {
-        const { navigation } = this.props;
-        const list = navigation.getParam('list', 'default');
-        let set = async () => {
-            await this.setState({list: list});
-            await this._retrieveData();
-        };
-        if(list !== this.state.list && list !== undefined)
-            set();
+        Storage.getLists().then(async (val) => {
+            const {navigation} = this.props;
+            const list = navigation.getParam('list', val[0]);
+            if (list !== this.state.list && list !== undefined) {
+                await this.setState({list: list});
+                await this._retrieveData();
+            }
+        });
+
+        if (this.state.list === undefined) {
+            return (<View style={{justifyContent: 'center'}}>
+                <ActivityIndicator size="large" color="#0000ff"/>
+            </View>);
+        }
 
         return (
             <View style={styles.main}>
                 <View style={{flex: 0, justifyContent: 'center', alignItems: 'center', paddingBottom: 10}}>
-                    <Text style={{fontSize: 30}}>List {this.state.list}</Text>
+                    <Text style={{fontSize: 30}}>100 Days A {this.state.list}</Text>
                 </View>
                 <View style={styles.checkBoxes}>
                     <Table finishedDays={this.state.finishedDays}>
@@ -137,7 +143,7 @@ export default class ProgressScreen extends Component {
                 <View style={styles.container}>
                     <TouchableOpacity onPress={this._pressAddDay.bind(this)}>
                         <View style={styles.button}>
-                            <Text style={styles.buttonText}>Check another day!</Text>
+                            <Text style={styles.buttonText}>I had a {this.state.list} today!</Text>
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={this._pressReset.bind(this)}>

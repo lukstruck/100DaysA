@@ -14,7 +14,7 @@ export default class Storage {
     static async getLists() {
         let ret = await Storage.load("@100DaysA:lists");
         if (!Array.isArray(ret) || ret.length === 0) {
-            ret = ["default"];
+            ret = ["Sweat"];
         }
         console.log("got all lists: " + ret);
         return ret;
