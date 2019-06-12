@@ -36,8 +36,8 @@ export default class Storage {
         return await Storage.store("@100DaysA:lists", lists);
     }
 
-    static async setProgress(listName, progress) {
-        return await Storage.store("@100DaysA:list:" + listName, progress);
+    static async setProgress(listName, progress, date) {
+        await Storage.store("@100DaysA:list:" + listName, {progress: progress, lastSet: date});
     }
 
     static async getProgress(listName) {

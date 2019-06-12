@@ -68,13 +68,14 @@ class TableProgress extends Component {
 class BarProgress extends Component {
 
     state = {progress: 0};
+
     setProgress() {
         if (this.state.progress !== this.props.finishedDays)
             this.setState({progress: this.props.finishedDays});
     }
 
     render() {
-        this.setProgress();
+        setTimeout(() => this.setProgress(), 10);
         return (
             <View>
                 <Progress.Circle style={{alignSelf: 'center'}} progress={this.state.progress / 100} size={200}
@@ -89,8 +90,15 @@ export default class ProgressScreen extends Component {
     constructor(props) {
         super(props);
 
+        let event = new Date();
+
+        let options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+
+        this.date = event.toLocaleDateString('en-US', options);
+
         this.state = {
             isLoading: true,
+
         }
     }
 
@@ -110,7 +118,7 @@ export default class ProgressScreen extends Component {
 
     _storeData = async () => {
         try {
-            await Storage.setProgress(this.state.list, this.state.finishedDays);
+            await Storage.setProgress(this.state.list, this.state.finishedDays, this.date);
         } catch (error) {
             // Error saving data
         }
@@ -120,8 +128,8 @@ export default class ProgressScreen extends Component {
         Storage.getProgress(this.state.list).then((value) => {
             if (value !== null) {
                 // We have data!!
-                console.log("got " + value + " for " + this.state.list);
-                this.setState({finishedDays: value});
+                console.log("got " + value.progress + " for " + this.state.list);
+                this.setState({finishedDays: value.progress, lastSet: value.lastSet});
             } else {
                 /*console.log("setting up data for " + this.state.list);
                 this._pressReset();*/
@@ -130,20 +138,14 @@ export default class ProgressScreen extends Component {
     };
 
     async _pressAddDay() {
-        if (this.state == undefined)
-            alert("Dafuq");
         if (typeof (this.state.finishedDays) != "number") {
             this.setState({finishedDays: parseInt(this.state.finishedDays)});
         }
         if (this.state.finishedDays === 100)
             this.setState({finishedDays: 0});
         await this.setState(previousState => ({finishedDays: previousState.finishedDays + 1}));
-        this._storeData();
-    }
-
-    async _pressReset() {
-        await this.setState({finishedDays: 0});
-        this._storeData();
+        await this._storeData();
+        await this._retrieveData();
     }
 
     render() {
@@ -162,6 +164,12 @@ export default class ProgressScreen extends Component {
             </View>);
         }
 
+        let buttonDisabled = false;
+        let buttonStyles = [styles.buttonText];
+        if(this.state.lastSet === this.date) {
+            buttonStyles.push(styles.disabledButton);
+            buttonDisabled = true;
+        }
         return (
             <View style={styles.main}>
                 <View style={{flex: 0, justifyContent: 'center', alignItems: 'center', paddingBottom: 10}}>
@@ -171,9 +179,9 @@ export default class ProgressScreen extends Component {
                     <BarProgress finishedDays={this.state.finishedDays}/>
                 </View>
                 <View style={styles.container}>
-                    <TouchableOpacity onPress={this._pressAddDay.bind(this)}>
+                    <TouchableOpacity onPress={this._pressAddDay.bind(this)} disabled={buttonDisabled}>
                         <View style={styles.button}>
-                            <Text style={styles.buttonText}>I had a {this.state.list} today!</Text>
+                            <Text style={buttonStyles}>I had a {this.state.list} today!</Text>
                         </View>
                     </TouchableOpacity>
                 </View>
@@ -206,5 +214,8 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 25,
         color: '#007aff',
-    }
+    },
+    disabledButton: {
+        color: '#8e8e93',
+    },
 });
