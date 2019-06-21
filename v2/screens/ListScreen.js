@@ -1,16 +1,19 @@
 import React, {Component} from 'react';
 import {
+    Button,
     FlatList,
+    Keyboard,
+    ScrollView,
     StyleSheet,
     Text,
-    View,
     TextInput,
-    Button,
     TouchableOpacity,
-    ActivityIndicator,
-    ScrollView
+    View,
 } from 'react-native';
-import Storage from './Storage';
+import Storage from '../components/Storage';
+import LoadingCircle from "../components/LoadingCircle";
+import {Pie} from 'react-native-progress';
+import { NavigationEvents } from 'react-navigation';
 
 export default class ListScreen extends Component {
 
@@ -21,92 +24,98 @@ export default class ListScreen extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            text: "",
-            listNames: [],
+            loaded: false,
         };
 
-        this.deleteList = this.deleteList.bind(this);
-        this._onPressButton = this._onPressButton.bind(this);
+        this.addListButtonPressed = this.addListButtonPressed.bind(this);
         this.switchTo = this.switchTo.bind(this);
     }
 
-    async componentDidMount() {
-        this.setState({
-            text: "",
-            bgColor: "white",
-        });
-        Storage.getLists().then((err, result) => {
+    componentDidMount() {
+        this.init();
+    }
+
+    init() {
+        this.loadLists().then(() => {
             this.setState({
-                listNames: result
-            })
+                goal: "",
+                bgColor: "white",
+                loaded: true
+            });
         });
     }
 
-    async _onPressButton() {
-        if (this.state.text !== "") {
-            await Storage.addList(this.state.text);
-            Storage.getLists().then((err, result) => this.setState({listNames: result, text: ""}));
-        } else
-            this.setState({bgColor: "red"})
+    loadLists() {
+        return Storage.getListsWithPercentage().then(lists => {
+            console.log("[LISTSCREEN.loadLists] lists " + JSON.stringify(lists));
+            return this.setState({lists: lists});
+        });
     }
 
-    async deleteList(list) {
-        await Storage.deleteList(list);
-        Storage.getLists().then((err, result) => this.setState({listNames: result}));
-    }
-
-    async switchTo(list) {
-        this.props.navigation.push("Progress", {list: list});
-    }
-
-    render() {
-        if (this.state === undefined || this.state.listNames === undefined) {
-            setTimeout(() => {
-                console.log("something's undefined.");
-                Storage.getLists().then((result) => {
-                    console.log("result");
-                    console.log(result);
-                    this.setState({listNames: result})
-                });
-            }, 100);
-            return (
-                <View style={{justifyContent: 'center'}}>
-                    <ActivityIndicator size="large" color="#0000ff"/>
-                </View>
-            );
+    addListButtonPressed() {
+        let inputText = this.state.goal.trim();
+        if (inputText !== "") {
+            return Storage.addList(inputText).then(() => {
+                Keyboard.dismiss();
+                this.init();
+            });
+        } else {
+            return this.setState({bgColor: "red"});
         }
+    }
+
+    switchTo(list) {
+        this.props.navigation.push("Progress", {title: list});
+    }
+
+    deleteList(list) {
+        return Storage.deleteList(list).then(() => {
+            return this.loadLists();
+        });
+    }
+
+    didLoad() {
+        let inputText = this.state.goal;
+        let inputBgColor = this.state.bgColor;
+        let lists = this.state.lists;
+
+
         return (
             <View style={styles.container}>
+                <NavigationEvents
+                    onWillFocus={() => this.loadLists()}
+                />
                 <Text style={{alignSelf: 'center', fontSize: 35, fontWeight: 'bold', paddingBottom: 20}}>
                     100 Days A ...
                 </Text>
                 <View style={{flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 5}}>
                     <TextInput
-                        value={this.state.text}
+                        value={inputText}
                         style={{
-                            backgroundColor: this.state.bgColor,
+                            backgroundColor: inputBgColor,
                             borderWidth: 0.5,
                             width: "70%"
                         }}
                         placeholder="Type Name of new list"
-                        onChangeText={(text) => this.setState({text: text, bgColor: "white"})}
+                        onChangeText={(text) => this.setState({goal: text, bgColor: "white"})}
                         returnKeyType="done"
                     />
                     <Button
-                        onPress={this._onPressButton}
+                        onPress={this.addListButtonPressed}
                         title="Add List"
                     />
                 </View>
                 <ScrollView style={{flex: 4}}>
                     <FlatList
-                        data={this.state.listNames.map(item => {
-                            return {key: item}
+                        data={lists.map(item => {
+                            return {key: item.name, value: item.percentage};
                         })}
                         renderItem={({item}) =>
                             <View style={{flex: 1, flexDirection: "row", justifyContent: "space-between"}}>
-                                <TouchableOpacity onPress={() => this.switchTo(item.key)}>
+                                <TouchableOpacity style={{width: "70%"}} onPress={() => this.switchTo(item.key)}>
                                     <View style={styles.button}>
                                         <Text style={styles.buttonText}>... {item.key}</Text>
+                                        <Pie progress={item.value} size={20}/>
                                     </View>
                                 </TouchableOpacity>
                                 <TouchableOpacity style={{justifyContent: 'center', flexDirection: 'column',}}
@@ -121,6 +130,24 @@ export default class ListScreen extends Component {
                 </ScrollView>
             </View>
         );
+    }
+
+    loading() {
+        return (
+            <LoadingCircle/>
+        );
+    }
+
+    check() {
+
+    }
+
+    render() {
+        if (this.state.loaded) {
+            this.check();
+            return this.didLoad();
+        }
+        return this.loading();
     }
 }
 
@@ -144,6 +171,9 @@ const styles = StyleSheet.create({
     },
     button: {
         alignItems: 'center',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        flex: 1,
     },
     buttonText: {
         padding: 5,

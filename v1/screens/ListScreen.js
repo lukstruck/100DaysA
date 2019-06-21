@@ -31,7 +31,7 @@ export default class FlatListBasics extends Component {
 
     async componentDidMount() {
         this.setState({
-            text: "",
+            goal: "",
             bgColor: "white",
         });
         Storage.getLists().then((err, result) => {
@@ -42,9 +42,9 @@ export default class FlatListBasics extends Component {
     }
 
     async _onPressButton() {
-        if (this.state.text !== "") {
-            await Storage.addList(this.state.text);
-            Storage.getLists().then((err, result) => this.setState({listNames: result, text: ""}));
+        if (this.state.goal !== "") {
+            await Storage.addList(this.state.goal);
+            Storage.getLists().then((err, result) => this.setState({listNames: result, goal: ""}));
         } else
             this.setState({bgColor: "red"})
     }
@@ -78,14 +78,14 @@ export default class FlatListBasics extends Component {
             <View style={styles.container}>
                 <View style={{flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 5}}>
                     <TextInput
-                        value={this.state.text}
+                        value={this.state.goal}
                         style={{
                             backgroundColor: this.state.bgColor,
                             borderWidth: 0.5,
                             width: "70%"
                         }}
                         placeholder="Type Name of new list"
-                        onChangeText={(text) => this.setState({text: text, bgColor: "white"})}
+                        onChangeText={(text) => this.setState({goal: text, bgColor: "white"})}
                         returnKeyType="done"
                     />
                     <Button

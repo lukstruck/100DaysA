@@ -2,13 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="975489da-632f-48a4-9dde-1eb2e0d65958" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/v2/components/HomeScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/100DaysA.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v2/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v2/components/LoadingCircle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v2/components/Settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v2/components/Version.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v2/metro.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v2/screens/ProgressSettingsScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v2/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/v2/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/screens/ListScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/v1/screens/ListScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/v2/assets/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/v2/assets/icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/v2/assets/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/v2/assets/splash.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v2/components/ListScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/v2/components/ListScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v2/components/ProgressScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/v2/components/ProgressScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/components/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/v2/screens/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/components/ListScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/v2/screens/ListScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/components/ProgressScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/v2/screens/ProgressScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/components/Storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/v2/components/Storage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/v2/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -23,58 +37,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/v2/App.js">
+        <entry file="file://$PROJECT_DIR$/v2/components/Version.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+            <state relative-caret-position="30">
+              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/v2/components/HomeScreen.js">
+        <entry file="file://$PROJECT_DIR$/v2/screens/ProgressSettingsScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/v2/components/ProgressScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="33" selection-start-line="1" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/v2/app.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/v2/components/Storage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/v2/components/ListScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="151" column="5" lean-forward="true" selection-start-line="143" selection-start-column="6" selection-end-line="151" selection-end-column="5" />
+            <state relative-caret-position="321">
+              <caret line="194" selection-start-line="194" selection-end-line="194" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -83,37 +58,56 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/v1/package.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/v2/package.json">
+        <entry file="file://$PROJECT_DIR$/v2/screens/ProgressScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/v1/navigation/AppNavigator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="125">
+              <caret line="134" column="72" selection-start-line="134" selection-start-column="72" selection-end-line="134" selection-end-column="72" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="n#TableProgress#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/v1/navigation/MainTabNavigator.js">
+        <entry file="file://$PROJECT_DIR$/v2/components/LoadingCircle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="180">
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v2/components/Storage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1245">
+              <caret line="84" column="52" selection-start-line="84" selection-start-column="52" selection-end-line="84" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v2/screens/HomeScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v2/screens/ListScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -131,6 +125,15 @@
     <findStrings>
       <find>default</find>
       <find>[styles.text, styles.p]</find>
+      <find>console</find>
+      <find>setP</find>
+      <find>getPro</find>
+      <find>lists.</find>
+      <find>asy</find>
+      <find>Icon</find>
+      <find>settings.</find>
+      <find>iosDialogIn</find>
+      <find>icon</find>
     </findStrings>
     <replaceStrings>
       <replace>styles.text</replace>
@@ -152,21 +155,35 @@
         <option value="$PROJECT_DIR$/v2/ListScreen.tsx" />
         <option value="$PROJECT_DIR$/v2/tsconfig.json" />
         <option value="$PROJECT_DIR$/v2/components/ListScreen.tsx" />
-        <option value="$PROJECT_DIR$/v2/package.json" />
-        <option value="$PROJECT_DIR$/v2/components/Storage.js" />
         <option value="$PROJECT_DIR$/v2/app.json" />
-        <option value="$PROJECT_DIR$/v2/App.js" />
-        <option value="$PROJECT_DIR$/v2/components/ProgressScreen.js" />
-        <option value="$PROJECT_DIR$/v2/components/ListScreen.js" />
         <option value="$PROJECT_DIR$/v2/components/HomeScreen.js" />
+        <option value="$PROJECT_DIR$/v2/components/ListScreen.js" />
+        <option value="$PROJECT_DIR$/v2/components/ProgressScreen.js" />
+        <option value="$PROJECT_DIR$/v2/components/Settings.js" />
+        <option value="$PROJECT_DIR$/v2/screens/SettingsScreen.js" />
+        <option value="$PROJECT_DIR$/v2/App.js" />
+        <option value="$PROJECT_DIR$/v2/components/LoadingCircle.js" />
+        <option value="$PROJECT_DIR$/v2/screens/HomeScreen.js" />
+        <option value="$PROJECT_DIR$/v2/metro.config.js" />
+        <option value="$PROJECT_DIR$/v2/components/Version.js" />
+        <option value="$PROJECT_DIR$/v2/screens/ListScreen.js" />
+        <option value="$PROJECT_DIR$/v2/components/Storage.js" />
+        <option value="$PROJECT_DIR$/v2/node_modules/react-native-settings-components/src/edit-text/edit-text.jsx" />
+        <option value="$PROJECT_DIR$/v2/package.json" />
+        <option value="$PROJECT_DIR$/v2/screens/ProgressScreen.js" />
+        <option value="$PROJECT_DIR$/v2/screens/ProgressSettingsScreen.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="20" />
-    <option name="y" value="43" />
-    <option name="width" value="1400" />
-    <option name="height" value="755" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -174,7 +191,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -191,17 +207,32 @@
               <item name="100DaysA" type="b2602c69:ProjectViewProjectNode" />
               <item name="100DaysA" type="462c0819:PsiDirectoryNode" />
               <item name="v2" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="100DaysA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="100DaysA" type="462c0819:PsiDirectoryNode" />
+              <item name="v2" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="100DaysA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="100DaysA" type="462c0819:PsiDirectoryNode" />
+              <item name="v2" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.4.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/v2/components" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -210,6 +241,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/v2/assets" />
+      <recent name="$PROJECT_DIR$/v2/screens" />
       <recent name="$PROJECT_DIR$/v2/components" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -240,7 +273,9 @@
       <option name="presentableId" value="Default" />
       <updated>1560267302867</updated>
       <workItem from="1560267306214" duration="844000" />
-      <workItem from="1560269306843" duration="25422000" />
+      <workItem from="1560269306843" duration="52834000" />
+      <workItem from="1561046604610" duration="1064000" />
+      <workItem from="1561048211232" duration="13550000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1560267943754</created>
@@ -284,23 +319,28 @@
       <option name="project" value="LOCAL" />
       <updated>1560326427939</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added Homescreen with donation possibility">
+      <created>1560333833485</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1560333833485</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26266000" />
+    <option name="totallyTimeSpent" value="68292000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="43" width="1400" height="755" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24945612" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24876674" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32771084" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32880846" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -310,7 +350,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32880846" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32880846" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32880846" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32771084" />
+      <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -335,154 +376,30 @@
     <MESSAGE value="adding version" />
     <MESSAGE value="v2 ready" />
     <MESSAGE value="added one click per day" />
-    <option name="LAST_COMMIT_MESSAGE" value="added one click per day" />
+    <MESSAGE value="added Homescreen with donation possibility" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Homescreen with donation possibility" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/images/splash.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/icon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/robot-dev.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/TabBarIcon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/StyledText.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navigation/MainTabNavigator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-908">
-          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navigation/AppNavigator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="60" column="4" lean-forward="true" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/LinksScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/Storage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/ProgressScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="170" column="35" lean-forward="true" selection-start-line="170" selection-start-column="35" selection-end-line="170" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/ListScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="69" column="15" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/v2/Storage.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/v2/App.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/v2/ListScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/v2/components/Storage.tsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/v2/components/ProgressScreen.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/v2/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/v2/components/ListScreen.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/v2/babel.config.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/images/splash.png" />
+    <entry file="file://$PROJECT_DIR$/assets/images/icon.png" />
+    <entry file="file://$PROJECT_DIR$/assets/images/robot-dev.png" />
+    <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js" />
+    <entry file="file://$PROJECT_DIR$/components/TabBarIcon.js" />
+    <entry file="file://$PROJECT_DIR$/components/StyledText.js" />
+    <entry file="file://$PROJECT_DIR$/navigation/MainTabNavigator.js" />
+    <entry file="file://$PROJECT_DIR$/navigation/AppNavigator.js" />
+    <entry file="file://$PROJECT_DIR$/App.js" />
+    <entry file="file://$PROJECT_DIR$/screens/LinksScreen.js" />
+    <entry file="file://$PROJECT_DIR$/components/Storage.js" />
+    <entry file="file://$PROJECT_DIR$/screens/ProgressScreen.js" />
+    <entry file="file://$PROJECT_DIR$/screens/ListScreen.js" />
+    <entry file="file://$PROJECT_DIR$/v2/Storage.js" />
+    <entry file="file://$PROJECT_DIR$/v2/App.tsx" />
+    <entry file="file://$PROJECT_DIR$/v2/ListScreen.js" />
+    <entry file="file://$PROJECT_DIR$/v2/components/Storage.tsx" />
+    <entry file="file://$PROJECT_DIR$/v2/components/ProgressScreen.tsx" />
+    <entry file="file://$PROJECT_DIR$/v2/tsconfig.json" />
+    <entry file="file://$PROJECT_DIR$/v2/components/ListScreen.tsx" />
     <entry file="file://$PROJECT_DIR$/v1/app.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -507,19 +424,72 @@
     <entry file="file://$PROJECT_DIR$/v1/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/v2/package.json">
+    <entry file="file://$PROJECT_DIR$/v2/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/v2/components/Storage.js">
+    <entry file="file://$PROJECT_DIR$/v2/components/Settings.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yarn.lock" />
+    <entry file="file://$PROJECT_DIR$/v2/package-lock.json" />
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/components/LoadingCircle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+        <state relative-caret-position="180">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/screens/HomeScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/node_modules/react-native-settings-components/src/divider/divider-short.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/node_modules/react-native-settings-components/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/babel.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/.watchmanconfig">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/v2/app.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -528,36 +498,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/v2/App.js">
+    <entry file="file://$PROJECT_DIR$/v2/metro.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        <state relative-caret-position="150">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/v2/components/ProgressScreen.js">
+    <entry file="file://$PROJECT_DIR$/v2/components/Version.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/components/Storage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="84" column="52" selection-start-line="84" selection-start-column="52" selection-end-line="84" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/node_modules/react-native/Libraries/Alert/Alert.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/node_modules/react-native-settings-components/src/edit-text/edit-text.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="33" selection-start-line="1" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/v2/components/ListScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="151" column="5" lean-forward="true" selection-start-line="143" selection-start-column="6" selection-end-line="151" selection-end-column="5" />
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/v2/components/HomeScreen.js">
+    <entry file="file://$PROJECT_DIR$/v2/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/assets/settings.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/assets/lukas.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/assets/icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/assets/splash.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/screens/ProgressScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="134" column="72" selection-start-line="134" selection-start-column="72" selection-end-line="134" selection-end-column="72" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="n#TableProgress#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/screens/ListScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/screens/ProgressSettingsScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="194" selection-start-line="194" selection-end-line="194" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

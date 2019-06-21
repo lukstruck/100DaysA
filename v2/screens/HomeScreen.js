@@ -1,6 +1,8 @@
 import {AppLoading} from 'expo';
 import React, {Component} from 'react';
 import {View, Text, Linking, TouchableOpacity} from 'react-native';
+import Version from "../components/Version";
+import Storage from "../components/Storage"
 
 export default class HomeScreen extends Component {
 
@@ -11,6 +13,16 @@ export default class HomeScreen extends Component {
     state = {isReady: false};
 
     async _cacheResourcesAsync() {
+    }
+
+    componentDidMount() {
+        (async () => {
+        let lastVersion = await Storage.getLastUsedVersion();
+        let currentVersion = Version.getVersion();
+        if(lastVersion !== currentVersion) {
+            console.log("[HOMESCREEN.componentDidMount] version changed from " + lastVersion + " to " + currentVersion);
+            Storage.setCurrentUsedVersion(currentVersion);
+        }})();
     }
 
     donate() {
@@ -31,13 +43,13 @@ export default class HomeScreen extends Component {
             return (
                 <AppLoading
                     startAsync={this._cacheResourcesAsync}
-                    onFinish={() => this.setState({isReady: true})}
+                    onFinish={() => setTimeout(() => this.setState({isReady: true}), 10)}
                     onError={console.warn}
                 />
             );
         }
 
-        this.props.navigation.navigate("List");
+        setTimeout(() => this.props.navigation.navigate("List"), 10);
         return (
             <View style={styles.main}>
                 <Text style={[styles.text, styles.header]}>Thank you for using 100DaysA!</Text>
