@@ -26,7 +26,7 @@
     "ios": {
       "supportsTablet": true
     },
-    "description": "This app is to support the #YesTheory #100DayChallenge. You can add lists and check them off daily, showing your progress. Future updates will include sharing functionality, statistics and more. \nContact me for more info, suggestions and more: lukstruck@gmail.com",
+    "description": "This app is to support the #YesTheory #100DayChallenge. You can add lists and check them off daily, showing your progress. You can also set the amount of days until the goal is reached. Future updates will include sharing functionality, statistics and more. \nContact me for more info, suggestions and more: lukstruck@gmail.com",
     "githubUrl": "https://github.com/lukstruck/100DaysA"
   }
 }
