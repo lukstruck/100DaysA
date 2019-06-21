@@ -12,6 +12,7 @@ import {
 } from "react-native-settings-components";
 import TimePicker from "react-native-24h-timepicker";
 import Icon from "react-native-vector-icons/EvilIcons";
+import SettingsTextInput from "../components/SettingsTextInput";
 // import PushNotification from "react-native-push-notification";
 
 export default class ProgressSettingsScreen extends Component {
@@ -117,7 +118,6 @@ class Settings extends Component {
             settings.goal = parseInt(value);
             this.setState(settings);
         } else {
-            alert(value + " is not a number!");
         }
     }
 
@@ -182,16 +182,7 @@ class Settings extends Component {
                     title={headerTitle}
                 />
                 <SettingsDividerLong android={false}/>
-                <SettingsEditText
-                    title="Number of days"
-                    dialogDescription={"Enter number of days."}
-                    valuePlaceholder="100"
-                    negativeButtonTitle={"Cancel"}
-                    buttonRightTitle={"Save"}
-                    onValueChange={val => this.setDays(val)}
-                    value={this.state.settings.goal.toString()}
-                    positiveButtonTitle={"Save"}
-                />
+                <SettingsTextInput title={"Number of days"} text={this.state.settings.goal.toString()} onEndEditing={val => this.setDays(val)}/>
                 <SettingsDividerLong android={false}/>
                 <SettingsDividerLong android={false}/>
                 <SettingsCategoryHeader

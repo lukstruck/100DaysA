@@ -1,6 +1,6 @@
 import {AppLoading} from 'expo';
 import React, {Component} from 'react';
-import {View, Text, Linking, TouchableOpacity} from 'react-native';
+import {ScrollView, View, Text, Linking, TouchableOpacity} from 'react-native';
 import Version from "../components/Version";
 import Storage from "../components/Storage"
 
@@ -51,7 +51,7 @@ export default class HomeScreen extends Component {
 
         setTimeout(() => this.props.navigation.navigate("List"), 10);
         return (
-            <View style={styles.main}>
+            <ScrollView style={styles.main}>
                 <Text style={[styles.text, styles.header]}>Thank you for using 100DaysA!</Text>
                 <View style={{padding: 5}}>
                     <Text style={styles.text}>If you like the app, you can leave a review on the App Store or donate
@@ -72,7 +72,7 @@ export default class HomeScreen extends Component {
                         <Text style={styles.buttonText}>Start the challenge!</Text>
                     </View>
                 </TouchableOpacity>
-            </View>
+            </ScrollView>
         );
     }
 }
@@ -83,7 +83,6 @@ const styles = {
         paddingTop: 20,
         flexDirection: 'column',
         flex: 1,
-        justifyContent: 'space-between'
     },
     text: {
         paddingTop: 10,
