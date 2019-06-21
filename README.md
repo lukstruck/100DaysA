@@ -20,3 +20,12 @@ This project was started after watching the following video from Yes Theory http
 ## Can I help?
 
 Sure. I don't know much about React Native yet, so cleaning up my code or adding new features is welcome.
+
+## Screenshots
+
+Managing the lists:
+![Lists](https://lukstruck.github.io/100DaysA/listScreen.png)
+
+Viewing daily progress:
+![Progress](https://lukstruck.github.io/100DaysA/progressScreen.png)
+
